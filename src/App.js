@@ -137,14 +137,19 @@ function Footer({ items }) {
   const numOfItems = items.length;
   const itemsPacked = items.filter((item) => item.packed).length;
 
+  let message = "Add Items...";
+
+  if (numOfItems > 0) {
+    message =
+      itemsPacked === numOfItems
+        ? "All Packed! Happy & Safe journey"
+        : `${numOfItems} ${numOfItems > 1 ? "Items" : "Item"} in the list, 
+           ${itemsPacked} ${itemsPacked > 1 ? "Items" : "Item"} packed`;
+  }
+
   return (
     <footer>
-      <p>
-        {itemsPacked === numOfItems
-          ? "All Packed! Happy & Safe journey"
-          : `${numOfItems} ${numOfItems > 1 ? "Items" : "Item"} in the list, 
-        ${itemsPacked} ${itemsPacked > 1 ? "Items" : "Item"} packed`}
-      </p>
+      <p>{message}</p>
     </footer>
   );
 }
