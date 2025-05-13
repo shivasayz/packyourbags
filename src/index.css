@@ -1,0 +1,289 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 180px;
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  color: #f39c12;
+  font-size: 55px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Add Item Form */
+.addlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #ecf0f1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.addlist p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-right: 20px;
+}
+
+.addlist select {
+  background-color: #bdc3c7;
+  border: 2px solid #95a5a6;
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 80px; /* 👈 Changed from 18% to a fixed pixel width */
+}
+
+.addlist input[type="text"] {
+  background-color: #bdc3c7;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 45%;
+  margin-right: 20px;
+  border: 2px solid #95a5a6;
+}
+
+/* Added more space between the select and input */
+.addlist .input-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.addlist button {
+  background-color: #f39c12;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.addlist button:hover {
+  background-color: #f1c40f;
+}
+
+/* Item List (Item Card) */
+.list-items {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ecf0f1;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  color: #34495e;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  font-family: "Lora", serif; /* Applying a new elegant font */
+}
+
+.item-card:hover {
+  background-color: #f7f9f9;
+  transform: translateY(-5px);
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  accent-color: #f39c12;
+}
+
+/* Sticky actions bar above footer */
+.sticky-actions {
+  position: sticky;
+  bottom: 100px;
+  background-color: #ecf0f1;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Quantity select (smaller width) */
+.addlist select {
+  width: 70px; /* smaller and cleaner */
+  margin-right: 16px;
+}
+
+.item-card span {
+  text-decoration: none;
+  flex-grow: 1;
+  font-size: 18px; /* Adjusted font size for item text */
+}
+
+.item-card span[style="text-decoration: line-through;"] {
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+
+.item-card button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #f39c12;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.item-card button:hover {
+  color: #d4ac0d;
+}
+
+/* Actions Section (Sort & Clear All) */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.actions select {
+  background-color: #bdc3c7;
+  border: 2px solid #95a5a6;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 48%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.actions select:hover {
+  border-color: #f39c12;
+}
+
+.actions button {
+  background-color: #f39c12;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  width: 48%;
+}
+
+.actions button:hover {
+  background-color: #d4ac0d;
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: #f39c12;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .addlist {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .addlist select,
+  .addlist input[type="text"],
+  .addlist button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .list-items ul {
+    gap: 10px;
+  }
+
+  .item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions select,
+  .actions button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.item-card span {
+  flex: 1;
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-family: "Inter", sans-serif; /* Clean and readable */
+}
+
+.item-card input[type="checkbox"] {
+  margin-right: 12px;
+}
+
+.item-card span.packed {
+  text-decoration: line-through;
+  color: #95a5a6;
+  font-style: italic;
+}
